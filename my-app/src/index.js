@@ -1,17 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//thực hành nhúng tên vào react element bằng React.createElement
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// const name = "Huyennk";
+// React.createElement("h1",{style:{textAlign : "center" , color : "yellow" }},name)
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render (
+//   React.createElement("h1",{style : {textAlign : "center", color : "yellow"}},name)
+// );
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//thực hành nhúng tên vào react element bằng jsx
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// const name = "Huyennk";
+// <h1 style={{textAlign : "right" , color: "green"}}>{name}</h1>
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render (
+//   <h1 style={{textAlign : "right" , color: "green"}}>{name}</h1>
+// )
+
+//tạo element hiển thị danh sách các loại quả
+import ReactDOM from "react-dom/client";
+const fruits = ["Apple","Banana","Orange","CranBerry"];
+<div>
+  <h1>List of fruits</h1>
+  <ul>
+    { fruits.map((item) => (
+      <li>{item}</li>
+    ))
+    }
+  </ul>
+</div>
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <div>
+  <h1>List of fruits</h1>
+  <ul>
+    { fruits.map((item) => (
+      <li>{item}</li>
+    ))
+    }
+  </ul>
+</div>
+)
