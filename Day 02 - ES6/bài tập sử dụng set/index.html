@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const zoo = new Set(["Bear","Dog","Cat","Monkey","Bird"]);
+    // kiem tra co trong danh sach chua
+    let exist = zoo.has("Bear");
+    console.log(exist);
+
+    //them moi
+    zoo.add("Lion");
+    zoo.add("Camel");
+    const newZoo = [...zoo];
+    console.log(newZoo);
+
+    //xoa khoi danh sach
+    zoo.delete("Cat");
+
+    //In danh sach 
+    console.log(zoo);
+</script>
+</html>
