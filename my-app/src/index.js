@@ -19,26 +19,40 @@
 // )
 
 //tạo element hiển thị danh sách các loại quả
+// import ReactDOM from "react-dom/client";
+// const fruits = ["Apple","Banana","Orange","CranBerry"];
+// <div>
+//   <h1>List of fruits</h1>
+//   <ul>
+//     { fruits.map((item) => (
+//       <li>{item}</li>
+//     ))
+//     }
+//   </ul>
+// </div>
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <div>
+//   <h1>List of fruits</h1>
+//   <ul>
+//     { fruits.map((item) => (
+//       <li>{item}</li>
+//     ))
+//     }
+//   </ul>
+// </div>
+// )
+
+//thực hành hiển thị thời gian hiện tại
 import ReactDOM from "react-dom/client";
-const fruits = ["Apple","Banana","Orange","CranBerry"];
-<div>
-  <h1>List of fruits</h1>
-  <ul>
-    { fruits.map((item) => (
-      <li>{item}</li>
-    ))
-    }
-  </ul>
-</div>
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <div>
-  <h1>List of fruits</h1>
-  <ul>
-    { fruits.map((item) => (
-      <li>{item}</li>
-    ))
-    }
-  </ul>
-</div>
-)
+const tick = () => {
+  root.render(
+    <div>
+      <h1>Hello World</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+};
+setInterval(tick,1000);
